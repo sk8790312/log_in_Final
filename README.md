@@ -50,7 +50,7 @@ pip install flask flask_cors PyPDF2 python-docx bs4 pptx requests
 ```
 
 ### 3）启动服务
-请注意！共需要启动两个服务：
+请注意！需要同时开启两个终端，分别启动一个服务：
 
  1. 登录系统（端口5000）
 ```bash
