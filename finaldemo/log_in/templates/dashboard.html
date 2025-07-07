@@ -1,62 +1,54 @@
 {% extends 'base.html' %}
 
-{% block title %}个人中心 - 智能助手{% endblock %}
+{% block title %}用户仪表板 - 智能助手{% endblock %}
 
 {% block content %}
-<div class="login-page-center">
-    <div class="col-md-8 mx-auto">
-        <div class="card shadow-lg border-0 rounded-lg">
-            <div class="card-header bg-primary text-white">
-                <h3 class="mb-0 text-center">欢迎回来，{{ username }}</h3>
-            </div>
-            <div class="card-body">
-                <div class="alert alert-success">
-                    <h4 class="text-center">登录成功！</h4>
-                    <p class="text-center">您已成功登录到系统。</p>
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">欢迎回来，{{ username }}！</h3>
                 </div>
-                
-                <div class="row mt-4">
-                    <div class="col-md-6">
+                <div class="card-body">
+                    <div class="alert alert-success" role="alert">
+                        您已成功登录系统！
+                    </div>
+                    
+                    {% if email %}
                         <div class="card mb-4">
                             <div class="card-header">
-                                <i class="fas fa-user me-1"></i>
-                                个人信息
+                                <h5 class="mb-0">邮箱信息</h5>
                             </div>
                             <div class="card-body">
-                                <p><strong>用户名：</strong> {{ username }}</p>
-                                <p><strong>账号状态：</strong> <span class="badge bg-success">正常</span></p>
-                                <p><strong>上次登录：</strong> {{ now().strftime('%Y-%m-%d %H:%M:%S') }}</p>
+                                <p><strong>您的邮箱：</strong> {{ email }}</p>
+                                {% if email_verified %}
+                                    <div class="alert alert-success">
+                                        <i class="fas fa-check-circle"></i> 您的邮箱已验证
+                                    </div>
+                                {% else %}
+                                    <div class="alert alert-warning">
+                                        <i class="fas fa-exclamation-triangle"></i> 您的邮箱尚未验证
+                                    </div>
+                                    <a href="{{ url_for('verify_email') }}" class="btn btn-primary">
+                                        <i class="fas fa-envelope"></i> 立即验证邮箱
+                                    </a>
+                                {% endif %}
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-cog me-1"></i>
-                                账号操作
-                            </div>
-                            <div class="card-body">
-                                <div class="d-grid gap-2">
-                                    <a href="{{ url_for('change_password') }}" class="btn btn-outline-primary">修改密码</a>
-                                    <a href="{{ url_for('logout') }}" class="btn btn-danger">退出登录</a>
-                                </div>
-                            </div>
+                    {% else %}
+                        <div class="alert alert-warning">
+                            <i class="fas fa-exclamation-triangle"></i> 您尚未绑定邮箱，部分功能可能受限。
                         </div>
-                    </div>
-                </div>
-                
-                <div class="row mt-3">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header bg-success text-white">
-                                <i class="fas fa-brain me-1"></i>
-                                系统导航
-                            </div>
-                            <div class="card-body text-center">
-                                <p>您可以通过以下按钮进入智能知识图谱系统</p>
-                                <a href="http://localhost:5001" class="btn btn-success btn-lg">进入智能知识图谱生成系统</a>
-                            </div>
-                        </div>
+                    {% endif %}
+                    
+                    <div class="d-grid gap-2 mt-4">
+                        <a href="{{ url_for('change_password') }}" class="btn btn-warning">
+                            <i class="fas fa-key"></i> 修改密码
+                        </a>
+                        <a href="{{ url_for('logout') }}" class="btn btn-danger">
+                            <i class="fas fa-sign-out-alt"></i> 退出登录
+                        </a>
                     </div>
                 </div>
             </div>

@@ -5,6 +5,8 @@ body {
     min-height: 100vh;
     margin: 0;
     padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer {
@@ -163,6 +165,8 @@ body {
     right: 0;
     background-color: #f8f9fa;
     z-index: 100;
+    font-size: 0.9em;
+    color: #6c757d;
 }
 
 .login-page-center {
@@ -185,4 +189,22 @@ body {
 
 .login-page-center .card {
     width: 100%;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.main-navbar .navbar-brand {
+    font-weight: bold;
+}
+
+html, body {
+    height: 100%;
+}
+
+.content-wrapper {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
 } 

@@ -8528,3 +8528,459 @@ openai.APIConnectionError: Connection error.
 2025-07-03 11:30:22,169 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 11:30:22] "GET / HTTP/1.1" 200 -
 2025-07-03 11:30:22,471 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 11:30:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-07-03 11:30:22,502 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 11:30:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-03 13:38:15,285 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-03 13:38:15,285 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-03 13:38:15,288 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-03 13:38:15,288 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-03 13:38:15,288 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-03 13:38:15,320 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-07-03 13:38:15,320 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-03 13:38:15,327 - werkzeug - INFO -  * Restarting with stat
+2025-07-03 13:38:16,393 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-03 13:38:16,393 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-03 13:38:16,393 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-03 13:38:16,393 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-03 13:38:16,393 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-03 13:38:16,423 - werkzeug - WARNING -  * Debugger is active!
+2025-07-03 13:38:16,433 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-03 13:39:32,369 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:39:32] "GET / HTTP/1.1" 200 -
+2025-07-03 13:39:32,744 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:39:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-03 13:39:32,832 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:39:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-03 13:39:54,328 - KnowledgeGraphGenerator - INFO - ÎÄ¼þÉÏ´«³É¹¦: uploads\266fecfe-ea17-489f-a70f-b3032f9cff61_CS0445CW.pdf, ´óÐ¡: 0.15 MB, ×î´ó½ÚµãÊý: 15
+2025-07-03 13:39:54,328 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼´¦ÀíÎÄµµ: uploads\266fecfe-ea17-489f-a70f-b3032f9cff61_CS0445CW.pdf, ÍØÆËID: 266fecfe-ea17-489f-a70f-b3032f9cff61, ×î´ó½ÚµãÊý: 15
+2025-07-03 13:39:54,328 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:39:54] "POST /api/generate HTTP/1.1" 200 -
+2025-07-03 13:39:54,328 - KnowledgeGraphGenerator - INFO - ÍØÆËID: 266fecfe-ea17-489f-a70f-b3032f9cff61, ½ø¶È: 10%, ÏûÏ¢: ½âÎöÎÄµµÄÚÈÝ...
+2025-07-03 13:39:54,328 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼½âÎöÎÄµµ: uploads\266fecfe-ea17-489f-a70f-b3032f9cff61_CS0445CW.pdf, ÀàÐÍ: .pdf
+2025-07-03 13:39:54,351 - KnowledgeGraphGenerator - INFO - ÒÑ½âÎöPDFµÚ 0 Ò³
+2025-07-03 13:39:54,411 - KnowledgeGraphGenerator - INFO - ÍØÆËID: 266fecfe-ea17-489f-a70f-b3032f9cff61, ½ø¶È: 20%, ÏûÏ¢: ×¼±¸ÌáÈ¡ÖªÊ¶²ã¼¶...
+2025-07-03 13:39:54,413 - KnowledgeGraphGenerator - INFO - ÎÄµµÄÚÈÝ¹ý³¤£¬½ØÈ¡Ç°8000×Ö·û
+2025-07-03 13:39:54,413 - KnowledgeGraphGenerator - INFO - ÍØÆËID: 266fecfe-ea17-489f-a70f-b3032f9cff61, ½ø¶È: 60%, ÏûÏ¢: µ÷ÓÃDeepSeek APIÌáÈ¡ÖªÊ¶²ã¼¶...
+2025-07-03 13:39:55,652 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:39:55] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:39:55,794 - KnowledgeGraphGenerator - INFO - µÚ1´Î³¢ÊÔµ÷ÓÃDeepSeek API...
+2025-07-03 13:39:56,337 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:39:56] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:39:56,776 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-07-03 13:39:57,643 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:39:57] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:39:58,334 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:39:58] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:39:59,642 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:39:59] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:40:00,334 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:40:00] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:40:01,644 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:40:01] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:40:02,334 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:40:02] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:40:03,644 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:40:03] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:40:04,334 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:40:04] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:40:05,651 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:40:05] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:40:06,334 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:40:06] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:40:06,587 - KnowledgeGraphGenerator - INFO - API·µ»ØÖªÊ¶¹ØÏµ: [
+  ["SCUPI+", "°üº¬", "Film Query Application"],
+  ["SCUPI+", "°üº¬", "Data Structure"],
+  ["SCUPI+", "°üº¬", "Java Application"],
+  ["SCUPI+", "°üº¬", "Film Data"],
+  ["Film Data", "°üº¬", "Movie Metadata"],
+...
+2025-07-03 13:40:06,587 - KnowledgeGraphGenerator - INFO - Ô­Ê¼JSONÄÚÈÝ: [
+  ["SCUPI+", "°üº¬", "Film Query Application"],
+  ["SCUPI+", "°üº¬", "Data Structure"],
+  ["SCUPI+", "°üº¬", "Java Application"],
+  ["SCUPI+", "°üº¬", "Film Data"],
+  ["Film Data", "°üº¬", "Movie Metadata"],
+...
+2025-07-03 13:40:06,587 - KnowledgeGraphGenerator - INFO - ³É¹¦½âÎöÖªÊ¶¹ØÏµ£¬¹²15Ìõ
+2025-07-03 13:40:06,587 - KnowledgeGraphGenerator - INFO - ³É¹¦ÌáÈ¡15ÌõÖªÊ¶²ã¼¶¹ØÏµ
+2025-07-03 13:40:06,587 - KnowledgeGraphGenerator - INFO - ÍØÆËID: 266fecfe-ea17-489f-a70f-b3032f9cff61, ½ø¶È: 80%, ÏûÏ¢: ¹¹½¨Ê÷ÐÎÖªÊ¶Í¼²¢ÌáÈ¡Ô­ÎÄÆ¬¶Î...
+2025-07-03 13:40:06,609 - KnowledgeGraphGenerator - INFO - Ê÷ÐÎÖªÊ¶Í¼Éú³ÉÍê³É£¬ºÄÊ±: 12.28 Ãë
+2025-07-03 13:40:06,609 - KnowledgeGraphGenerator - INFO - ÍØÆËID: 266fecfe-ea17-489f-a70f-b3032f9cff61, ½ø¶È: 100%, ÏûÏ¢: ´¦ÀíÍê³É
+2025-07-03 13:40:07,642 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:40:07] "GET /api/topology/266fecfe-ea17-489f-a70f-b3032f9cff61 HTTP/1.1" 200 -
+2025-07-03 13:40:36,470 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:40:36] "GET / HTTP/1.1" 200 -
+2025-07-03 13:40:36,774 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:40:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-03 13:40:37,026 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:40:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-03 13:41:24,614 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:41:24] "GET / HTTP/1.1" 200 -
+2025-07-03 13:41:24,871 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:41:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-03 13:41:24,955 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:41:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-03 13:41:32,499 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:41:32] "GET / HTTP/1.1" 200 -
+2025-07-03 13:41:32,805 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:41:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-03 13:41:32,830 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:41:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-03 13:41:42,946 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:41:42] "GET / HTTP/1.1" 200 -
+2025-07-03 13:41:43,198 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:41:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-03 13:41:43,281 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:41:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-03 13:41:55,067 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:41:55] "GET / HTTP/1.1" 200 -
+2025-07-03 13:41:55,371 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:41:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-03 13:41:55,412 - werkzeug - INFO - 127.0.0.1 - - [03/Jul/2025 13:41:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-04 10:08:34,738 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-04 10:08:34,738 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-04 10:08:34,741 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-04 10:08:34,741 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-04 10:08:34,741 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-04 10:08:35,005 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-07-04 10:08:35,005 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-04 10:08:35,015 - werkzeug - INFO -  * Restarting with stat
+2025-07-04 10:08:36,099 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-04 10:08:36,099 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-04 10:08:36,099 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-04 10:08:36,099 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-04 10:08:36,099 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-04 10:08:36,127 - werkzeug - WARNING -  * Debugger is active!
+2025-07-04 10:08:36,130 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-04 10:09:17,818 - werkzeug - INFO - 127.0.0.1 - - [04/Jul/2025 10:09:17] "GET / HTTP/1.1" 200 -
+2025-07-04 10:09:18,175 - werkzeug - INFO - 127.0.0.1 - - [04/Jul/2025 10:09:18] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-04 10:09:18,328 - werkzeug - INFO - 127.0.0.1 - - [04/Jul/2025 10:09:18] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-07-04 10:09:22,163 - werkzeug - INFO - 127.0.0.1 - - [04/Jul/2025 10:09:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-04 10:09:41,124 - werkzeug - INFO - 127.0.0.1 - - [04/Jul/2025 10:09:41] "GET / HTTP/1.1" 200 -
+2025-07-04 10:09:41,427 - werkzeug - INFO - 127.0.0.1 - - [04/Jul/2025 10:09:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-04 10:09:41,451 - werkzeug - INFO - 127.0.0.1 - - [04/Jul/2025 10:09:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-04 10:09:53,295 - werkzeug - INFO - 127.0.0.1 - - [04/Jul/2025 10:09:53] "GET / HTTP/1.1" 200 -
+2025-07-04 10:09:53,371 - werkzeug - INFO - 127.0.0.1 - - [04/Jul/2025 10:09:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-04 10:09:53,551 - werkzeug - INFO - 127.0.0.1 - - [04/Jul/2025 10:09:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 09:54:23,972 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 09:54:23,972 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 09:54:23,972 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 09:54:23,972 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 09:54:23,972 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 09:54:24,014 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-07-07 09:54:24,014 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 09:54:24,014 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 09:54:25,447 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 09:54:25,447 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 09:54:25,447 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 09:54:25,447 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 09:54:25,447 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 09:54:25,482 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 09:54:25,497 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 09:54:40,679 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:54:40] "GET / HTTP/1.1" 200 -
+2025-07-07 09:54:41,337 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:54:41] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-07 09:54:41,628 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:54:41] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-07-07 09:54:43,580 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 09:54:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-07 10:15:34,026 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 10:15:34,026 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 10:15:34,026 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 10:15:34,026 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 10:15:34,026 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 10:15:34,064 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-07-07 10:15:34,064 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 10:15:34,064 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 10:15:35,825 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 10:15:35,825 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 10:15:35,825 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 10:15:35,825 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 10:15:35,825 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 10:15:35,888 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 10:15:35,920 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 10:15:46,432 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:15:46] "GET / HTTP/1.1" 200 -
+2025-07-07 10:15:46,723 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:15:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-07 10:15:46,864 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:15:46] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-07-07 10:16:09,833 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:16:09] "GET / HTTP/1.1" 200 -
+2025-07-07 10:16:10,099 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:16:10] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-07 10:16:10,220 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:16:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 10:18:24,248 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:18:24] "GET / HTTP/1.1" 200 -
+2025-07-07 10:18:24,313 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:18:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 10:18:24,524 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:18:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 10:19:12,953 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:19:12] "GET / HTTP/1.1" 200 -
+2025-07-07 10:19:13,249 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:19:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 10:19:13,336 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:19:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 10:21:30,131 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:21:30] "GET / HTTP/1.1" 200 -
+2025-07-07 10:21:30,203 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:21:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 10:21:30,383 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:21:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 10:26:11,735 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:26:11] "GET / HTTP/1.1" 200 -
+2025-07-07 10:26:11,796 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:26:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 10:26:11,984 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:26:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 10:38:15,689 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:38:15] "GET / HTTP/1.1" 200 -
+2025-07-07 10:38:15,864 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:38:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 10:38:15,948 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:38:15] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 10:43:05,835 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:43:05] "GET / HTTP/1.1" 200 -
+2025-07-07 10:43:05,903 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:43:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 10:43:06,090 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:43:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 10:48:25,009 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:48:25] "GET / HTTP/1.1" 200 -
+2025-07-07 10:48:25,270 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:48:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 10:48:25,404 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:48:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 10:53:39,805 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:53:39] "GET / HTTP/1.1" 200 -
+2025-07-07 10:53:40,060 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:53:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 10:53:40,211 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:53:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 10:53:55,437 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:53:55] "GET / HTTP/1.1" 200 -
+2025-07-07 10:53:55,758 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:53:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 10:53:55,804 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:53:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 10:54:19,421 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:54:19] "GET / HTTP/1.1" 200 -
+2025-07-07 10:54:19,674 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:54:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 10:54:19,771 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 10:54:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 11:09:44,306 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 11:09:44] "GET / HTTP/1.1" 200 -
+2025-07-07 11:09:44,376 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 11:09:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 11:09:44,567 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 11:09:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 11:10:06,569 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 11:10:06] "GET / HTTP/1.1" 200 -
+2025-07-07 11:10:06,913 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 11:10:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 11:10:06,913 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 11:10:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 11:10:55,031 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sk879\\OneDrive\\Desktop\\Project\\finaldemo\\log_in\\log_in.py', reloading
+2025-07-07 11:10:55,146 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 11:10:57,180 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 11:10:57,180 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 11:10:57,181 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 11:10:57,181 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 11:10:57,181 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 11:10:57,226 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 11:10:57,259 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 11:14:17,618 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 11:14:17] "GET / HTTP/1.1" 200 -
+2025-07-07 11:14:18,015 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 11:14:18] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-07 11:14:18,322 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 11:14:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 12:21:26,814 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 12:21:26,815 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 12:21:26,815 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 12:21:26,815 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 12:21:26,816 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 12:21:26,847 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-07-07 12:21:26,847 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 12:21:26,849 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 12:21:27,858 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 12:21:27,860 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 12:21:27,860 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 12:21:27,860 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 12:21:27,860 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 12:21:27,881 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 12:21:27,891 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 12:21:49,804 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 12:21:49] "GET / HTTP/1.1" 200 -
+2025-07-07 12:21:50,149 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 12:21:50] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-07 12:21:50,282 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 12:21:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 12:21:51,040 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 12:21:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-07 12:21:58,728 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 12:21:58] "GET / HTTP/1.1" 200 -
+2025-07-07 12:21:58,773 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 12:21:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 12:21:58,994 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 12:21:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 12:22:58,517 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 12:22:58] "GET / HTTP/1.1" 200 -
+2025-07-07 12:22:58,863 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 12:22:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 12:22:58,864 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 12:22:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 13:47:37,992 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 13:47:37,992 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 13:47:37,992 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 13:47:37,992 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 13:47:37,992 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 13:47:38,033 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-07-07 13:47:38,033 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 13:47:38,033 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 13:47:39,099 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 13:47:39,099 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 13:47:39,099 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 13:47:39,099 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 13:47:39,099 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 13:47:39,130 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 13:47:39,140 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 13:55:13,418 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:13] "GET / HTTP/1.1" 200 -
+2025-07-07 13:55:14,494 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 13:55:14,667 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 13:55:15,543 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-07 13:55:31,688 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:31] "GET / HTTP/1.1" 200 -
+2025-07-07 13:55:32,043 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 13:55:32,048 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 13:55:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 14:29:22,839 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 14:29:22,839 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 14:29:22,839 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 14:29:22,841 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 14:29:22,841 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 14:29:22,895 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-07-07 14:29:22,895 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 14:29:22,896 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 14:29:24,110 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 14:29:24,110 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 14:29:24,110 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 14:29:24,110 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 14:29:24,110 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 14:29:24,131 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 14:29:24,142 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 14:57:02,596 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 14:57:02,596 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 14:57:02,596 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 14:57:02,596 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 14:57:02,596 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 14:57:02,631 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-07-07 14:57:02,631 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 14:57:02,633 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 14:57:03,678 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 14:57:03,678 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 14:57:03,684 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 14:57:03,684 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 14:57:03,684 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 14:57:03,703 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 14:57:03,715 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 14:57:53,403 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:57:53] "GET / HTTP/1.1" 200 -
+2025-07-07 14:57:53,827 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:57:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 14:57:53,933 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 14:57:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 15:10:57,112 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 15:10:57,114 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 15:10:57,114 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 15:10:57,114 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 15:10:57,114 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 15:10:57,153 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-07-07 15:10:57,153 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 15:10:57,159 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 15:10:58,306 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 15:10:58,306 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 15:10:58,308 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 15:10:58,308 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 15:10:58,308 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 15:10:58,330 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 15:10:58,335 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 15:37:50,342 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 15:37:50] "GET / HTTP/1.1" 200 -
+2025-07-07 15:37:50,715 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 15:37:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 15:37:50,801 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 15:37:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 15:54:15,716 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sk879\\OneDrive\\Desktop\\Project\\finaldemo\\log_in\\check_email.py', reloading
+2025-07-07 15:54:15,949 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 15:54:18,155 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 15:54:18,156 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 15:54:18,156 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 15:54:18,156 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 15:54:18,156 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 15:54:18,194 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 15:54:18,210 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 15:59:43,410 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sk879\\OneDrive\\Desktop\\Project\\finaldemo\\log_in\\log_in.py', reloading
+2025-07-07 15:59:43,534 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 15:59:45,670 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 15:59:45,670 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 15:59:45,670 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 15:59:45,670 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 15:59:45,670 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 15:59:45,709 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 15:59:45,724 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 16:00:45,189 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sk879\\OneDrive\\Desktop\\Project\\finaldemo\\log_in\\log_in.py', reloading
+2025-07-07 16:00:45,288 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 16:00:47,632 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:00:47,632 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:00:47,632 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:00:47,632 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:00:47,632 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:00:47,671 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 16:00:47,691 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 16:03:55,810 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:03:55] "GET / HTTP/1.1" 200 -
+2025-07-07 16:03:56,342 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:03:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 16:03:56,479 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:03:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 16:09:40,228 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sk879\\OneDrive\\Desktop\\Project\\finaldemo\\log_in\\log_in.py', reloading
+2025-07-07 16:09:40,388 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 16:09:42,359 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:09:42,359 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:09:42,359 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:09:42,359 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:09:42,361 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:09:42,393 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 16:09:42,401 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 16:10:18,635 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sk879\\OneDrive\\Desktop\\Project\\finaldemo\\log_in\\log_in.py', reloading
+2025-07-07 16:10:18,753 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 16:10:20,548 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:10:20,548 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:10:20,548 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:10:20,548 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:10:20,548 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:10:20,589 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 16:10:20,611 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 16:13:49,259 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:13:49,259 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:13:49,259 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:13:49,259 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:13:49,259 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:13:49,281 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-07-07 16:13:49,281 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 16:13:49,291 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 16:13:50,613 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:13:50,628 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:13:50,628 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:13:50,628 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:13:50,628 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:13:50,638 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 16:13:50,644 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 16:20:49,889 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sk879\\OneDrive\\Desktop\\Project\\finaldemo\\log_in\\log_in.py', reloading
+2025-07-07 16:20:49,975 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 16:20:51,011 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:20:51,011 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:20:51,011 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:20:51,011 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:20:51,011 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:20:51,024 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 16:20:51,039 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 16:21:35,959 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sk879\\OneDrive\\Desktop\\Project\\finaldemo\\log_in\\log_in.py', reloading
+2025-07-07 16:21:36,052 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 16:21:37,192 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:21:37,192 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:21:37,193 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:21:37,193 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:21:37,193 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:21:37,201 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 16:21:37,218 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 16:22:55,554 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:22:55,554 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:22:55,554 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:22:55,554 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:22:55,554 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:22:55,578 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-07-07 16:22:55,578 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 16:22:55,583 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 16:22:56,705 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:22:56,705 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:22:56,705 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:22:56,705 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:22:56,705 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:22:56,722 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 16:22:56,738 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 16:25:08,379 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:25:08,379 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:25:08,382 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:25:08,382 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:25:08,382 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:25:08,390 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-07-07 16:25:08,390 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-07 16:25:08,400 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 16:25:09,433 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:25:09,433 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:25:09,433 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:25:09,433 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:25:09,433 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:25:09,443 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 16:25:09,461 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 16:25:26,325 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:25:26] "GET / HTTP/1.1" 200 -
+2025-07-07 16:25:26,586 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:25:26] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-07-07 16:25:26,590 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:25:26] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-07-07 16:25:29,355 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:25:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-07 16:27:31,329 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sk879\\OneDrive\\Desktop\\Project\\finaldemo\\log_in\\log_in.py', reloading
+2025-07-07 16:27:31,408 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 16:27:32,498 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:27:32,498 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:27:32,499 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:27:32,499 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:27:32,499 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:27:32,508 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 16:27:32,521 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 16:28:28,068 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:28:28] "GET / HTTP/1.1" 200 -
+2025-07-07 16:28:28,300 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:28:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 16:28:28,343 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:28:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 16:35:09,416 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sk879\\OneDrive\\Desktop\\Project\\finaldemo\\log_in\\log_in.py', reloading
+2025-07-07 16:35:09,491 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 16:35:10,542 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:35:10,542 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:35:10,542 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:35:10,542 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:35:10,542 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:35:10,561 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 16:35:10,574 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 16:35:26,510 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sk879\\OneDrive\\Desktop\\Project\\finaldemo\\log_in\\log_in.py', reloading
+2025-07-07 16:35:26,606 - werkzeug - INFO -  * Restarting with stat
+2025-07-07 16:35:27,711 - KnowledgeGraphGenerator - INFO - ¿ªÊ¼³õÊ¼»¯Êý¾Ý¿â...
+2025-07-07 16:35:27,711 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÎÄ¼þÂ·¾¶: C:\Users\sk879\OneDrive\Desktop\Project\finaldemo\knowledge_graph.db
+2025-07-07 16:35:27,711 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿âÒÑ´æÔÚ£¬Ìø¹ý³õÊ¼»¯
+2025-07-07 16:35:27,711 - KnowledgeGraphGenerator - INFO - Êý¾Ý¿â³õÊ¼»¯Íê³É
+2025-07-07 16:35:27,711 - KnowledgeGraphGenerator - INFO - ÖªÊ¶Í¼Æ×Éú³ÉÏµÍ³Æô¶¯ÖÐ...
+2025-07-07 16:35:27,722 - werkzeug - WARNING -  * Debugger is active!
+2025-07-07 16:35:27,739 - werkzeug - INFO -  * Debugger PIN: 859-799-037
+2025-07-07 16:36:15,911 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:36:15] "GET / HTTP/1.1" 200 -
+2025-07-07 16:36:16,176 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:36:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 16:36:16,185 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:36:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 16:50:39,605 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:50:39] "GET / HTTP/1.1" 200 -
+2025-07-07 16:50:39,868 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:50:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 16:50:39,946 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:50:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 16:57:00,775 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:57:00] "GET / HTTP/1.1" 200 -
+2025-07-07 16:57:01,037 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:57:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 16:57:01,152 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 16:57:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-07 17:00:45,268 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 17:00:45] "GET / HTTP/1.1" 200 -
+2025-07-07 17:00:45,509 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 17:00:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-07 17:00:45,645 - werkzeug - INFO - 127.0.0.1 - - [07/Jul/2025 17:00:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
