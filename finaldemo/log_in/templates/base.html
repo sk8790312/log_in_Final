@@ -9,12 +9,12 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary main-navbar">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-end" href="{{ url_for('index') }}">
                 <span class="navbar-title">智能助教系统</span>
                 <span class="navbar-subtitle ms-2">AI驱动的知识管理与学习辅助平台</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -42,22 +42,28 @@
         </div>
     </nav>
 
-    <div class="container">
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} alert-dismissible fade show">
-                        {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-11 col-md-10 col-lg-10">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} alert-dismissible fade show" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
 
-        {% block content %}{% endblock %}
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
     </div>
 
-    <footer class="footer mt-5 py-3 bg-light main-footer">
+    <footer class="footer mt-auto py-3 bg-light main-footer">
         <div class="container text-center">
             <div class="footer-title">智能助教系统</div>
             <div class="footer-subtitle">AI驱动的知识管理与学习辅助平台</div>

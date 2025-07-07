@@ -19,6 +19,15 @@ body {
   position: relative;
 }
 
+.header .container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
 .hidden {
   display: none !important;
 }
@@ -38,6 +47,10 @@ body {
   gap: 10px;
 }
 
+.header .logo {
+  padding-left: 15px;
+}
+
 .logo i {
   font-size: 28px;
 }
@@ -48,9 +61,10 @@ body {
 }
 
 .header-nav {
-  position: absolute;
-  top: 15px;
-  right: 30px;
+  position: relative;
+  top: auto;
+  right: auto;
+  padding-right: 15px;
 }
 
 .header-nav ul {
