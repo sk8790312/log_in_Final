@@ -16,7 +16,14 @@
                 {% if session.username %}
                 <div class="alert alert-success">
                     <h4>您已登录为 {{ session.username }}</h4>
-                    <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg mt-3">进入个人中心</a>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="http://localhost:5001" class="btn btn-success btn-lg me-3">
+                            <i class="bi bi-diagram-3"></i> 进入智能图谱系统
+                        </a>
+                        <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg">
+                            <i class="bi bi-person-circle"></i> 进入个人中心
+                        </a>
+                    </div>
                 </div>
                 {% else %}
                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mt-4">
