@@ -5,7 +5,6 @@ import uuid
 import time
 import threading
 import logging
-import requests
 import sqlite3
 from PyPDF2 import PdfReader
 from docx import Document
@@ -530,6 +529,8 @@ def process_document(file_path, topology_id, max_nodes=0):
         with app.app_context():
             update_progress(topology_id, 10, "解析文档内容...")
             text = parse_document(file_path)
+            text = parse_document(file_path)
+
             if not text:
                 topology_results[topology_id] = {
                     "status": "error",
@@ -537,6 +538,18 @@ def process_document(file_path, topology_id, max_nodes=0):
                 }
                 logger.error(f"文档解析失败: {file_path}")
                 return
+            # ✅ 在这里添加缓存
+            uploaded_documents[topology_id] = text
+            
+            # 新增：将全文内容存入数据库，便于后续问答检索
+            db = get_db()
+            cursor = db.cursor()
+            cursor.execute(
+                "INSERT OR REPLACE INTO topologies (id, content, created_at) VALUES (?, ?, ?)",
+                (topology_id, text, time.strftime('%Y-%m-%d %H:%M:%S'))
+            )
+            db.commit()
+            
             update_progress(topology_id, 20, "准备提取知识层级...")
             text_length = len(text)
             if text_length < 100:
@@ -903,7 +916,11 @@ def get_question(topology_id, node_id):
             
             # 生成问题（基于会话状态）
             question = generate_question(node_label, content_snippet, consecutive_correct)
-            
+            if not question:
+                return jsonify({
+                    'status': 'error',
+                    'message': '未能为该节点生成有效问题，请检查原文内容或稍后重试。'
+                }), 500
             # 保存问题到数据库
             question_id = str(uuid.uuid4())
             cursor.execute(
@@ -965,7 +982,7 @@ def generate_question(topic, context, consecutive_correct=0):
         return question
     except Exception as e:
         logger.error(f"生成问题出错: {str(e)}", exc_info=True)
-        return f"关于{topic}的问题（基于原文）"
+        return None
 
 @app.route('/api/topology/<topology_id>/question/<question_id>/answer', methods=['POST'])
 def answer_question(topology_id, question_id):
@@ -1038,7 +1055,7 @@ def answer_question(topology_id, question_id):
             
             # 更新会话状态
             cursor.execute(
-                "SELECT consecutive_correct, mastered FROM quiz_sessions WHERE id = ?",
+                "SELECT consecutive_correct FROM quiz_sessions WHERE id = ?",
                 (session_id,)
             )
             session = cursor.fetchone()
@@ -1049,7 +1066,7 @@ def answer_question(topology_id, question_id):
                 }), 404
             
             current_consecutive = session["consecutive_correct"]
-            current_mastered = session["mastered"]
+            current_mastered = session["mastered"] if "mastered" in session.keys() else 0
             
             # 更新连续正确计数
             new_consecutive = current_consecutive + 1 if is_correct else 0
@@ -1151,7 +1168,7 @@ def evaluate_answer(question, answer, topic, context):
 }""".replace("{question}", question).replace("{answer}", answer).replace("{context}", context)},
         {"role": "user", "content": f"问题: {question}\n回答: {answer}\n原文片段: {context}\n请评估这个回答是否正确，并提供反馈。如果正确，考虑是否需要进一步提问。"}
     ]
-    
+
     try:
         response = client.chat.completions.create(
             model="deepseek-chat",
@@ -1239,6 +1256,175 @@ def ignore_nodes(topology_id):
             'message': f"忽略节点时出错: {str(e)}"
         }), 500
 
+from openai import OpenAI
+
+client = OpenAI(api_key=OPENAI_API_KEY, base_url="https://api.deepseek.com")
+
+# 全局变量缓存上传文档内容，方便检索（示例，生产应用用数据库或向量数据库）
+uploaded_documents = {}  # topology_id: 原文全文字符串
+
+def recommend_resources_based_on_question(question):
+    """
+    使用 DeepSeek API 根据用户问题推荐相关学习资源，返回格式：
+    [
+      {"title": "资源标题", "url": "链接", "snippet": "相关内容摘要"},
+      ...
+    ]
+    """
+    from openai import OpenAI
+    client = OpenAI(api_key=OPENAI_API_KEY, base_url="https://api.deepseek.com")
+    messages = [
+        {"role": "system", "content": "你是一个学习资源推荐专家，能够根据用户的问题推荐最相关的高质量学习资料。请根据用户的问题，推荐5个高质量的学习资源，每个资源包含title、url、snippet，要求以JSON数组格式输出。只返回JSON数组，不要有多余解释。"},
+        {"role": "user", "content": f"问题：{question}\n请推荐5个相关学习资源。"}
+    ]
+    try:
+        response = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=messages,
+            max_tokens=800
+        )
+        import json
+        raw = response.choices[0].message.content.strip()
+        # 尝试解析JSON
+        try:
+            # 处理可能的markdown代码块
+            if raw.startswith('```json'):
+                raw = raw[7:]
+            if raw.endswith('```'):
+                raw = raw[:-3]
+            resources = json.loads(raw)
+            if isinstance(resources, list):
+                return resources
+        except Exception:
+            pass
+        # 解析失败返回空
+        return []
+    except Exception as e:
+        logger.error(f"学习资源推荐API错误: {str(e)}", exc_info=True)
+        return []
+
+@app.route('/api/chat', methods=['POST'])
+def chat_with_knowledge():
+    """
+    用户交互问答接口：
+    优先基于上传文档内容回答，若文档匹配度低，则调用网络智能问答。
+    同时进行相关学习资源推荐，返回相关链接和内容片段。
+    """
+    try:
+        data = request.json
+        topology_id = data.get('topology_id', '')
+        user_question = data.get('question', '').strip()
+        
+        if not user_question:
+            return jsonify({'status': 'error', 'message': '问题不能为空'}), 400
+        
+        # 获取上传文档全文内容
+        with app.app_context():
+            db = get_db()
+            cursor = db.cursor()
+            cursor.execute("SELECT content FROM topologies WHERE id = ?", (topology_id,))
+            row = cursor.fetchone()
+            document_text = row["content"] if row else ""
+        
+        # 先基于文档内容进行语义匹配（示例：简单文本包含检测，生产应使用语义向量匹配）
+        matched_snippet = semantic_search(document_text, user_question)
+        
+        # 日志调试
+        logger.info(f"topology_id: {topology_id}, 文档长度: {len(document_text)}, 匹配片段: {matched_snippet[:100] if matched_snippet else '无'}")
+        
+        # 如果匹配度高（示例判断），则用文档内容回答
+        if matched_snippet:
+            # 调用模型基于文档回答
+            answer = generate_answer_from_context(user_question, matched_snippet)
+            
+            # 资源推荐基于文档内容（示例：提取关键词生成学习资源）
+            resources = recommend_resources_based_on_question(user_question)
+            source = "document"
+        else:
+            # 否则调用智能网络问答接口（这里调用DeepSeek）
+            answer = generate_answer_from_web(user_question)
+            
+            # 资源推荐基于网络回答内容
+            resources = recommend_resources_based_on_question(user_question)
+            source = "web"
+        
+        return jsonify({
+            'status': 'success',
+            'answer': answer,
+            'resources': resources,
+            'source': source
+        })
+        
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': f"交互问答出错: {str(e)}"}), 500
+
+def semantic_search(document_text, question):
+    """
+    增强分段和命中能力：先按换行和标点分段，长段再每100字切片兜底。
+    命中不到时返回首段内容用于调试。
+    """
+    if not document_text:
+        return None
+    import re
+    # 先按换行和标点分段
+    raw_paragraphs = re.split(r'[\n。！？!?.,，]', document_text)
+    paragraphs = []
+    for para in raw_paragraphs:
+        para = para.strip()
+        if len(para) > 120:
+            # 长段落再切片
+            for i in range(0, len(para), 100):
+                paragraphs.append(para[i:i+100])
+        elif para:
+            paragraphs.append(para)
+    keywords = re.findall(r'\w+', question.lower())
+    for para in paragraphs:
+        if any(kw in para.lower() for kw in keywords):
+            return para
+    # 命中不到时返回首段内容用于调试
+    if paragraphs:
+        return paragraphs[0]
+    return None
+
+def generate_answer_from_context(question, context):
+    """
+    使用 DeepSeek 模型基于上下文生成回答
+    """
+    messages = [
+        {"role": "system", "content": "你是一个知识专家，基于给出的文档内容回答用户的问题，回答要准确且简洁。"},
+        {"role": "user", "content": f"文档内容: {context}\n问题: {question}\n请给出回答。"}
+    ]
+    try:
+        response = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=messages,
+            max_tokens=1024  # 增大输出长度
+        )
+        return response.choices[0].message.content.strip()
+    except Exception as e:
+        logger.error(f"生成文档上下文回答错误: {str(e)}", exc_info=True)
+        return "抱歉，基于文档的回答生成失败。"
+
+def generate_answer_from_web(question):
+    """
+    调用网络智能问答接口（DeepSeek）
+    """
+    messages = [
+        {"role": "system", "content": "你是一个智能助理，能够基于互联网资源回答各种问题。"},
+        {"role": "user", "content": question}
+    ]
+    try:
+        response = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=messages,
+            max_tokens=1024  # 增大输出长度
+        )
+        return response.choices[0].message.content.strip()
+    except Exception as e:
+        logger.error(f"生成网络回答错误: {str(e)}", exc_info=True)
+        return "抱歉，网络问答服务不可用。"
+
+
 @app.teardown_appcontext
 def close_db(exception):
     """关闭数据库连接"""
@@ -1263,6 +1449,7 @@ if __name__ == '__main__':
     
     # 拓扑图处理结果存储（使用全局变量）
     topology_results = {}
+    uploaded_documents = {}
     
     logger.info("知识图谱生成系统启动中...")
-    app.run(debug=True, port=5001)
+    app.run(debug=True, port=5000)
