@@ -1,0 +1,128 @@
+[
+  {
+    "source": "造纸术",
+    "relation": "属于",
+    "target": "中国古代四大发明",
+    "highlighted": false
+  },
+  {
+    "source": "指南针",
+    "relation": "属于",
+    "target": "中国古代四大发明",
+    "highlighted": false
+  },
+  {
+    "source": "火药",
+    "relation": "属于",
+    "target": "中国古代四大发明",
+    "highlighted": false
+  },
+  {
+    "source": "印刷术",
+    "relation": "属于",
+    "target": "中国古代四大发明",
+    "highlighted": false
+  },
+  {
+    "source": "蔡伦",
+    "relation": "改进",
+    "target": "造纸术",
+    "highlighted": false
+  },
+  {
+    "source": "毕昇",
+    "relation": "发明",
+    "target": "活字印刷术",
+    "highlighted": false
+  },
+  {
+    "source": "活字印刷术",
+    "relation": "属于",
+    "target": "印刷术",
+    "highlighted": false
+  },
+  {
+    "source": "中国",
+    "relation": "发明",
+    "target": "造纸术",
+    "highlighted": false
+  },
+  {
+    "source": "中国",
+    "relation": "发明",
+    "target": "指南针",
+    "highlighted": false
+  },
+  {
+    "source": "中国",
+    "relation": "发明",
+    "target": "火药",
+    "highlighted": false
+  },
+  {
+    "source": "中国",
+    "relation": "发明",
+    "target": "印刷术",
+    "highlighted": false
+  },
+  {
+    "source": "造纸术",
+    "relation": "影响",
+    "target": "世界文明",
+    "highlighted": false
+  },
+  {
+    "source": "指南针",
+    "relation": "影响",
+    "target": "世界文明",
+    "highlighted": false
+  },
+  {
+    "source": "火药",
+    "relation": "影响",
+    "target": "世界文明",
+    "highlighted": false
+  },
+  {
+    "source": "印刷术",
+    "relation": "影响",
+    "target": "世界文明",
+    "highlighted": false
+  },
+  {
+    "source": "蔡伦",
+    "relation": "生活于",
+    "target": "东汉时期",
+    "highlighted": false
+  },
+  {
+    "source": "毕昇",
+    "relation": "生活于",
+    "target": "北宋时期",
+    "highlighted": false
+  },
+  {
+    "source": "火药",
+    "relation": "由",
+    "target": "硝石",
+    "highlighted": false
+  },
+  {
+    "source": "火药",
+    "relation": "由",
+    "target": "硫磺",
+    "highlighted": false
+  },
+  {
+    "source": "火药",
+    "relation": "由",
+    "target": "木炭",
+    "highlighted": false
+  },
+  {
+    "source": "中国",
+    "relation": "是",
+    "target": "世界四大文明古国之一",
+    "highlighted": false
+  }
+]

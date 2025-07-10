@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}首页 - 智能助手{% endblock %}
+
+{% block content %}
+<div class="login-page-center">
+  <div class="d-flex justify-content-center w-100">
+    <div class="text-center card-container">
+        <div class="card shadow-lg border-0 rounded-lg mt-5">
+            <div class="card-header bg-primary text-white">
+                <h2 class="display-6">欢迎使用智能助教系统</h2>
+            </div>
+            <div class="card-body">
+                <p class="lead">这是一个AI驱动的知识管理平台，帮助用户高效学习与知识梳理。</p>
+                
+                {% if session.username %}
+                <div class="alert alert-success">
+                    <h4>您已登录为 {{ session.username }}</h4>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="http://localhost:5001" class="btn btn-success btn-lg me-3">
+                            <i class="bi bi-diagram-3"></i> 进入智能图谱系统
+                        </a>
+                        <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg">
+                            <i class="bi bi-person-circle"></i> 进入个人中心
+                        </a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mt-4">
+                    <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg px-4 gap-3">登录</a>
+                    <a href="{{ url_for('register') }}" class="btn btn-outline-primary btn-lg px-4">注册</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %} 
