@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}用户仪表板 - 智能助手{% endblock %}
+
+{% block content %}
+<div class="container py-3">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="card shadow-lg border-0 rounded-lg mt-3">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0 fs-4">欢迎回来，{{ username }}！</h3>
+                </div>
+                <div class="card-body py-3">
+                    <div class="alert alert-success py-2" role="alert">
+                        您已成功登录系统！
+                    </div>
+                    
+                    {% if email %}
+                        <div class="card mb-3">
+                            <div class="card-header py-2">
+                                <h5 class="mb-0 fs-5">邮箱信息</h5>
+                            </div>
+                            <div class="card-body py-2">
+                                <p class="mb-2"><strong>您的邮箱：</strong> {{ email }}</p>
+                                {% if email_verified %}
+                                    <div class="alert alert-success py-2 mb-0">
+                                        <i class="bi bi-check-circle"></i> 您的邮箱已验证
+                                    </div>
+                                {% else %}
+                                    <div class="alert alert-warning py-2 mb-2">
+                                        <i class="bi bi-exclamation-triangle"></i> 您的邮箱尚未验证
+                                    </div>
+                                    <a href="{{ url_for('verify_email') }}" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-envelope"></i> 立即验证邮箱
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-warning py-2">
+                            <i class="bi bi-exclamation-triangle"></i> 您尚未绑定邮箱，部分功能可能受限。
+                        </div>
+                    {% endif %}
+                    
+                    <div class="card mb-3">
+                        <div class="card-header bg-success text-white py-2">
+                            <h5 class="mb-0 fs-5">系统导航</h5>
+                        </div>
+                        <div class="card-body py-3 text-center">
+                            <p class="mb-2">您可以通过以下按钮快速访问系统功能</p>
+                            <div class="d-flex justify-content-center">
+                                <a href="{{ url_for('index') }}" class="btn btn-primary me-2">
+                                    <i class="bi bi-house-door"></i> 返回首页
+                                </a>
+                                <a href="http://localhost:5001" class="btn btn-success">
+                                    <i class="bi bi-diagram-3"></i> 进入智能图谱系统
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <a href="{{ url_for('change_password') }}" class="btn btn-warning">
+                            <i class="bi bi-key"></i> 修改密码
+                        </a>
+                        <a href="{{ url_for('logout') }}" class="btn btn-danger">
+                            <i class="bi bi-box-arrow-right"></i> 退出登录
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

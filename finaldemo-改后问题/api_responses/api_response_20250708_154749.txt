@@ -1,0 +1,92 @@
+[
+  {
+    "source": "JAVA语言",
+    "relation": "用于",
+    "target": "电影数据存储项目",
+    "highlighted": false
+  },
+  {
+    "source": "数据结构",
+    "relation": "应用于",
+    "target": "电影数据存储项目",
+    "highlighted": false
+  },
+  {
+    "source": "Visual Studio Code",
+    "relation": "作为工具",
+    "target": "编写程序",
+    "highlighted": false
+  },
+  {
+    "source": "Terminal",
+    "relation": "用于",
+    "target": "调试程序",
+    "highlighted": false
+  },
+  {
+    "source": "HashMap",
+    "relation": "用于",
+    "target": "快速查找电影",
+    "highlighted": false
+  },
+  {
+    "source": "TreeMap",
+    "relation": "用于",
+    "target": "支持范围查询",
+    "highlighted": false
+  },
+  {
+    "source": "Movies类",
+    "relation": "包含",
+    "target": "电影元数据",
+    "highlighted": false
+  },
+  {
+    "source": "Credits类",
+    "relation": "存储",
+    "target": "演员和剧组信息",
+    "highlighted": false
+  },
+  {
+    "source": "Ratings类",
+    "relation": "存储",
+    "target": "用户评分",
+    "highlighted": false
+  },
+  {
+    "source": "CSV文件",
+    "relation": "作为",
+    "target": "数据来源",
+    "highlighted": false
+  },
+  {
+    "source": "LoadData类",
+    "relation": "解析",
+    "target": "CSV文件",
+    "highlighted": false
+  },
+  {
+    "source": "JUnit测试",
+    "relation": "用于",
+    "target": "验证功能",
+    "highlighted": false
+  },
+  {
+    "source": "String.intern()",
+    "relation": "优化",
+    "target": "内存效率",
+    "highlighted": false
+  },
+  {
+    "source": "时间复杂度",
+    "relation": "分析",
+    "target": "查询效率",
+    "highlighted": false
+  },
+  {
+    "source": "技术报告",
+    "relation": "论证",
+    "target": "数据结构合理性",
+    "highlighted": false
+  }
+]
