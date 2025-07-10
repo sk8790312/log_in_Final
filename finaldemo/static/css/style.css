@@ -16,16 +16,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  position: relative;
-}
-
-.header .container {
-  width: 100%;
-  max-width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
 }
 
 .hidden {
@@ -38,17 +28,12 @@ body {
   color: white;
   padding: 15px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.header .logo {
-  padding-left: 15px;
 }
 
 .logo i {
@@ -58,22 +43,6 @@ body {
 .logo h1 {
   font-size: 22px;
   font-weight: 600;
-}
-
-.header-nav {
-  position: relative;
-  top: auto;
-  right: auto;
-  padding-right: 15px;
-}
-
-.header-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  margin: 0;
-  padding: 0;
 }
 
 /* 主内容区域 */
@@ -696,6 +665,81 @@ body {
   color: #e74c3c;
 }
 
+.chat-section {
+  padding: 40px 0;
+  background-color: #f7f9fc;
+}
+
+.chat-box {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background: white;
+}
+
+.chat-history {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#qaInput {
+  flex: 1;
+  padding: 10px;
+  height: 80px;
+  resize: none;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#qaSubmitBtn {
+  padding: 10px 20px;
+  background: #357edd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#qaSubmitBtn:hover {
+  background: #285ec7;
+}
+
+.msg {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.user-msg {
+  text-align: right;
+  color: #2c3e50;
+}
+
+.ai-msg {
+  text-align: left;
+  color: #1e8449;
+}
+
+.error-msg {
+  color: #c0392b;
+}
+
+.chat-feedback ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.chat-feedback li {
+  margin-bottom: 6px;
+}
+
+
 /* 页脚样式 */
 .footer {
   background: #2c3e50;
@@ -896,6 +940,8 @@ body {
   vertical-align: middle;
 }
 
+
+
 /* 新增导航栏样式 */
 .header-nav {
   display: flex;
@@ -912,32 +958,11 @@ body {
 .header-nav a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.header-nav a.profile-link {
-  background-color: #2ecc71;
-  color: white;
-  border-radius: 20px;
-  padding: 8px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.header-nav a.profile-link:hover {
-  background-color: #27ae60;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.header-nav a.profile-link:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
 .header-nav a:hover {
@@ -1464,20 +1489,19 @@ body {
 /* 响应式设计调整 */
 @media (max-width: 768px) {
   .header {
-    padding: 10px 0;
+    padding: 15px 0;
   }
   
   .logo {
     flex-direction: column;
     align-items: flex-start;
+    gap: 5px;
   }
   
   .header-nav {
-    position: static;
     margin-top: 15px;
-    display: flex;
-    justify-content: center;
     width: 100%;
+    justify-content: center;
   }
   
   .hero-features, .feature-grid, .workflow {
@@ -1490,10 +1514,13 @@ body {
   
   .graph-header {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
   }
   
   .graph-controls {
-    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
   
   .filter-group, .view-switch {
@@ -1502,9 +1529,11 @@ body {
   
   .quiz-meta {
     flex-direction: column;
+    gap: 10px;
   }
   
   .feedback-actions {
     flex-direction: column;
+    gap: 10px;
   }
 }

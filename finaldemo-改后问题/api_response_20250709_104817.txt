@@ -1,0 +1,92 @@
+[
+  {
+    "source": "知识图谱",
+    "relation": "是",
+    "target": "图形化工具",
+    "highlighted": false
+  },
+  {
+    "source": "知识图谱",
+    "relation": "表示",
+    "target": "知识结构",
+    "highlighted": false
+  },
+  {
+    "source": "知识图谱",
+    "relation": "包含",
+    "target": "实体",
+    "highlighted": false
+  },
+  {
+    "source": "知识图谱",
+    "relation": "包含",
+    "target": "关系",
+    "highlighted": false
+  },
+  {
+    "source": "知识图谱",
+    "relation": "包含",
+    "target": "属性",
+    "highlighted": false
+  },
+  {
+    "source": "实体",
+    "relation": "是",
+    "target": "基本单元",
+    "highlighted": false
+  },
+  {
+    "source": "实体",
+    "relation": "可以是",
+    "target": "人",
+    "highlighted": false
+  },
+  {
+    "source": "实体",
+    "relation": "可以是",
+    "target": "地点",
+    "highlighted": false
+  },
+  {
+    "source": "实体",
+    "relation": "可以是",
+    "target": "事物",
+    "highlighted": false
+  },
+  {
+    "source": "实体",
+    "relation": "可以是",
+    "target": "概念",
+    "highlighted": false
+  },
+  {
+    "source": "关系",
+    "relation": "描述",
+    "target": "实体之间的联系",
+    "highlighted": false
+  },
+  {
+    "source": "属性",
+    "relation": "描述",
+    "target": "实体的特征",
+    "highlighted": false
+  },
+  {
+    "source": "示例数据集",
+    "relation": "展示",
+    "target": "如何组织数据",
+    "highlighted": false
+  },
+  {
+    "source": "示例数据集",
+    "relation": "用于生成",
+    "target": "知识图谱",
+    "highlighted": false
+  },
+  {
+    "source": "知识图谱",
+    "relation": "帮助理解",
+    "target": "复杂关系",
+    "highlighted": false
+  }
+]

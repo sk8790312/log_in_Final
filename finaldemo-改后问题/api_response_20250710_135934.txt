@@ -1,0 +1,314 @@
+[
+  {
+    "source": "人工智能",
+    "relation": "包含",
+    "target": "机器学习",
+    "highlighted": false
+  },
+  {
+    "source": "人工智能",
+    "relation": "包含",
+    "target": "知识表示与推理",
+    "highlighted": false
+  },
+  {
+    "source": "人工智能",
+    "relation": "包含",
+    "target": "感知与交互",
+    "highlighted": false
+  },
+  {
+    "source": "机器学习",
+    "relation": "包含",
+    "target": "监督学习",
+    "highlighted": false
+  },
+  {
+    "source": "机器学习",
+    "relation": "包含",
+    "target": "无监督学习",
+    "highlighted": false
+  },
+  {
+    "source": "机器学习",
+    "relation": "包含",
+    "target": "强化学习",
+    "highlighted": false
+  },
+  {
+    "source": "监督学习",
+    "relation": "典型算法",
+    "target": "线性回归",
+    "highlighted": false
+  },
+  {
+    "source": "监督学习",
+    "relation": "典型算法",
+    "target": "决策树",
+    "highlighted": false
+  },
+  {
+    "source": "监督学习",
+    "relation": "典型算法",
+    "target": "SVM",
+    "highlighted": false
+  },
+  {
+    "source": "监督学习",
+    "relation": "应用",
+    "target": "预测房价",
+    "highlighted": false
+  },
+  {
+    "source": "监督学习",
+    "relation": "应用",
+    "target": "贷款审批",
+    "highlighted": false
+  },
+  {
+    "source": "监督学习",
+    "relation": "应用",
+    "target": "图像分类",
+    "highlighted": false
+  },
+  {
+    "source": "无监督学习",
+    "relation": "典型算法",
+    "target": "K-means聚类",
+    "highlighted": false
+  },
+  {
+    "source": "无监督学习",
+    "relation": "典型算法",
+    "target": "PCA降维",
+    "highlighted": false
+  },
+  {
+    "source": "无监督学习",
+    "relation": "应用",
+    "target": "客户分群",
+    "highlighted": false
+  },
+  {
+    "source": "无监督学习",
+    "relation": "应用",
+    "target": "数据压缩",
+    "highlighted": false
+  },
+  {
+    "source": "无监督学习",
+    "relation": "应用",
+    "target": "新闻网站自动归类",
+    "highlighted": false
+  },
+  {
+    "source": "强化学习",
+    "relation": "关键要素",
+    "target": "Agent",
+    "highlighted": false
+  },
+  {
+    "source": "强化学习",
+    "relation": "关键要素",
+    "target": "Environment",
+    "highlighted": false
+  },
+  {
+    "source": "强化学习",
+    "relation": "关键要素",
+    "target": "Reward",
+    "highlighted": false
+  },
+  {
+    "source": "强化学习",
+    "relation": "应用",
+    "target": "AlphaGo",
+    "highlighted": false
+  },
+  {
+    "source": "强化学习",
+    "relation": "应用",
+    "target": "机器人学习走路",
+    "highlighted": false
+  },
+  {
+    "source": "知识表示与推理",
+    "relation": "包含",
+    "target": "知识图谱",
+    "highlighted": false
+  },
+  {
+    "source": "知识表示与推理",
+    "relation": "包含",
+    "target": "专家系统",
+    "highlighted": false
+  },
+  {
+    "source": "知识表示与推理",
+    "relation": "包含",
+    "target": "逻辑推理",
+    "highlighted": false
+  },
+  {
+    "source": "知识图谱",
+    "relation": "应用",
+    "target": "谷歌搜索",
+    "highlighted": false
+  },
+  {
+    "source": "知识图谱",
+    "relation": "应用",
+    "target": "医疗诊断系统",
+    "highlighted": false
+  },
+  {
+    "source": "专家系统",
+    "relation": "应用",
+    "target": "银行信贷风险评估",
+    "highlighted": false
+  },
+  {
+    "source": "专家系统",
+    "relation": "应用",
+    "target": "工业设备故障诊断",
+    "highlighted": false
+  },
+  {
+    "source": "逻辑推理",
+    "relation": "类型",
+    "target": "演绎推理",
+    "highlighted": false
+  },
+  {
+    "source": "逻辑推理",
+    "relation": "类型",
+    "target": "归纳推理",
+    "highlighted": false
+  },
+  {
+    "source": "感知与交互",
+    "relation": "包含",
+    "target": "计算机视觉",
+    "highlighted": false
+  },
+  {
+    "source": "感知与交互",
+    "relation": "包含",
+    "target": "自然语言处理",
+    "highlighted": false
+  },
+  {
+    "source": "感知与交互",
+    "relation": "包含",
+    "target": "语音交互",
+    "highlighted": false
+  },
+  {
+    "source": "计算机视觉",
+    "relation": "技术栈",
+    "target": "图像采集",
+    "highlighted": false
+  },
+  {
+    "source": "计算机视觉",
+    "relation": "技术栈",
+    "target": "预处理",
+    "highlighted": false
+  },
+  {
+    "source": "计算机视觉",
+    "relation": "技术栈",
+    "target": "特征提取",
+    "highlighted": false
+  },
+  {
+    "source": "计算机视觉",
+    "relation": "技术栈",
+    "target": "识别分类",
+    "highlighted": false
+  },
+  {
+    "source": "计算机视觉",
+    "relation": "应用",
+    "target": "人脸识别",
+    "highlighted": false
+  },
+  {
+    "source": "计算机视觉",
+    "relation": "应用",
+    "target": "医学影像分析",
+    "highlighted": false
+  },
+  {
+    "source": "自然语言处理",
+    "relation": "关键技术",
+    "target": "词向量",
+    "highlighted": false
+  },
+  {
+    "source": "自然语言处理",
+    "relation": "关键技术",
+    "target": "Transformer架构",
+    "highlighted": false
+  },
+  {
+    "source": "自然语言处理",
+    "relation": "应用",
+    "target": "智能客服",
+    "highlighted": false
+  },
+  {
+    "source": "自然语言处理",
+    "relation": "应用",
+    "target": "情感分析",
+    "highlighted": false
+  },
+  {
+    "source": "语音交互",
+    "relation": "处理流程",
+    "target": "麦克风接收",
+    "highlighted": false
+  },
+  {
+    "source": "语音交互",
+    "relation": "处理流程",
+    "target": "声纹识别",
+    "highlighted": false
+  },
+  {
+    "source": "语音交互",
+    "relation": "处理流程",
+    "target": "语音转文本",
+    "highlighted": false
+  },
+  {
+    "source": "语音交互",
+    "relation": "处理流程",
+    "target": "语义理解",
+    "highlighted": false
+  },
+  {
+    "source": "语音交互",
+    "relation": "处理流程",
+    "target": "生成回复",
+    "highlighted": false
+  },
+  {
+    "source": "语音交互",
+    "relation": "处理流程",
+    "target": "语音合成",
+    "highlighted": false
+  },
+  {
+    "source": "语音交互",
+    "relation": "应用",
+    "target": "声纹识别",
+    "highlighted": false
+  },
+  {
+    "source": "语音交互",
+    "relation": "应用",
+    "target": "TTS技术",
+    "highlighted": false
+  }
+]
