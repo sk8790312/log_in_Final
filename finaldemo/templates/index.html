@@ -19,7 +19,6 @@
           <li><a href="#features">产品功能</a></li>
           <li><a href="#how-it-works">使用指南</a></li>
           <li><a href="#faq">常见问题</a></li>
-          <li><a href="javascript:void(0)" onclick="window.location.href='http://127.0.0.1:5000/dashboard'" class="profile-link">个人中心</a></li>
         </ul>
       </nav>
     </div>
@@ -109,10 +108,8 @@
             推荐上传完整章节文档以获得更准确的知识图谱，单个文件建议不超过50MB
           </p>
           
-          <label for="fileInput" class="upload-btn">
-            <i class="fa fa-file-text-o"></i>选择文件
-            <input id="fileInput" type="file" accept=".ppt,.pptx,.pdf,.docx,.doc,.txt">
-          </label>
+          <label for="fileInput" class="file-upload-label">选择文件</label>
+          <input type="file" id="fileInput" accept=".docx,.pdf,.pptx" />
           
           <!-- 文件状态提示区域 -->
           <div id="fileStatus" class="file-status hidden">
@@ -313,6 +310,329 @@
         </div>
       </div>
     </section>
+    <section class="chat-section">
+  <div class="container">
+    <h2 class="section-title">智能助手</h2>
+    <div class="chat-box">
+      <div class="chat-history" id="qaHistory"></div>
+      <div class="chat-input">
+        <textarea id="qaInput" placeholder="请输入您的问题，如：图神经网络的核心思想是？"></textarea>
+        <button id="qaSubmitBtn">发送</button>
+      </div>
+      <div class="chat-feedback" id="resourceRecommend"></div>
+    </div>
+  </div>
+</section>
+<script>
+  const qaSubmitBtn = document.getElementById('qaSubmitBtn');
+  const qaInput = document.getElementById('qaInput');
+  const qaHistory = document.getElementById('qaHistory');
+  const resourceRecommend = document.getElementById('resourceRecommend');
+
+  // 新增：思考中提示元素
+  let thinkingMsg = null;
+
+  // 新增：欢迎引导语
+  qaInput.addEventListener('focus', () => {
+    if (!qaHistory.innerHTML.trim()) {
+      const welcomeMsg = `<div class='msg ai-msg welcome-msg'>
+        <strong>您好！我是院校智能助手</strong>，可以为您解答关于学校、专业、招生等方面的问题。<br>
+        您可以：<br>
+        <span class='dot'>•</span> 点击上方知识图谱探索感兴趣的主题<br>
+        <span class='dot'>•</span> 直接提问您关心的问题<br>
+        <span class='dot'>•</span> 查看下方推荐的热门话题
+      </div>`;
+      qaHistory.innerHTML = welcomeMsg;
+    }
+  });
+
+  qaSubmitBtn.addEventListener('click', () => {
+    const question = qaInput.value.trim();
+    if (!question) return;
+    // 显示用户问题（去除首行空行）
+    const userMsg = `<div class='msg user-msg'><strong>你：</strong> ${question}</div>`;
+    qaHistory.innerHTML += userMsg;
+    qaInput.value = '';
+    // 显示“正在思考中……”
+    thinkingMsg = document.createElement('div');
+    thinkingMsg.className = 'msg thinking-msg';
+    thinkingMsg.innerHTML = `<i class="fa fa-spinner fa-spin"></i> 正在思考中……`;
+    qaHistory.appendChild(thinkingMsg);
+    qaHistory.scrollTop = qaHistory.scrollHeight;
+    // 判断是否上传文档
+    const requestData = {
+        question: question,
+        topology_id: currentTopologyId || '',  // 若无则为 ""
+    };
+
+    fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(requestData)
+    })
+    .then(res => res.json())
+    .then(data => {
+      // 隐藏“正在思考中……”
+      if (thinkingMsg) {
+        thinkingMsg.remove();
+        thinkingMsg = null;
+      }
+      if (data.status === 'success') {
+        // 显示 AI 回答来源（文档 or 网络），去除首行空行
+        const aiMsg = `<div class='msg ai-msg'><strong>智能助手（来自${data.source === 'document' ? '文档' : '网络'}）：</strong> ${data.answer}</div>`;
+        qaHistory.innerHTML += aiMsg;
+
+        if (data.resources && data.resources.length > 0) {
+          let links = `<div class="resource-list"><h4>📚 推荐学习资源：</h4><ul>`;
+          for (const res of data.resources) {
+            links += `<li><a href='${res.url}' target='_blank'>${res.title}</a> - ${res.snippet}</li>`;
+          }
+          links += `</ul></div>`;
+          resourceRecommend.innerHTML = links;
+        } else {
+          resourceRecommend.innerHTML = '';
+        }
+      } else {
+        qaHistory.innerHTML += `<div class='msg error-msg'>⚠️ 出错：${data.message}</div>`;
+      }
+    });
+  });
+</script>
+<style>
+  .chat-box {
+    background: #f8fafc;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(52,152,219,0.08);
+    padding: 32px 32px 20px 32px;
+    margin-bottom: 32px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .chat-history {
+    min-height: 120px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-bottom: 12px;
+  }
+  .msg {
+    margin: 18px 0 10px 0;
+    padding: 12px 18px 16px 18px; /* 上内边距减小，去除首行空白 */
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.8;
+    word-break: break-all;
+    white-space: pre-line;
+    box-shadow: 0 1px 4px rgba(52,152,219,0.04);
+    transition: background 0.2s;
+  }
+  .user-msg {
+    background: #f3f4f6;
+    color: #222;
+    border-left: 5px solid #3498db;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .ai-msg {
+    background: #eaf6ff;
+    color: #1a355b;
+    border-left: 5px solid #2ecc71;
+    font-weight: 500;
+    position: relative;
+    font-size: 16px;
+  }
+  .ai-msg strong {
+    color: #2176ae;
+    font-weight: bold;
+    font-size: 17px;
+  }
+  .ai-msg em, .user-msg em {
+    color: #e67e22;
+    font-style: normal;
+    font-weight: bold;
+    background: #fffbe6;
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+  .ai-msg code, .user-msg code {
+    background: #f4f4f4;
+    color: #c7254e;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 15px;
+  }
+  .ai-msg pre, .user-msg pre {
+    background: #f4f4f4;
+    color: #333;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 10px 0;
+    font-size: 15px;
+    overflow-x: auto;
+  }
+  .ai-msg blockquote, .user-msg blockquote {
+    background: #f0f7ff;
+    border-left: 4px solid #3498db;
+    margin: 10px 0;
+    padding: 10px 16px;
+    color: #555;
+    border-radius: 6px;
+    font-style: italic;
+    font-size: 15px;
+  }
+  .thinking-msg {
+    color: #888;
+    font-style: italic;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    background: #f8fafc;
+    border-left: 4px solid #95a5a6;
+    padding: 10px 14px;
+    border-radius: 8px;
+  }
+  .thinking-msg i {
+    color: #3498db;
+    margin-right: 6px;
+  }
+  .resource-list {
+    background: #f6fafd;
+    border-radius: 8px;
+    padding: 14px 18px 10px 18px;
+    margin: 18px 0 0 0;
+    box-shadow: 0 1px 4px rgba(52,152,219,0.04);
+  }
+  .resource-list h4 {
+    color: #2176ae;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .resource-list ul {
+    padding-left: 18px;
+    margin: 0;
+  }
+  .resource-list li {
+    margin-bottom: 7px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #1a355b;
+  }
+  .resource-list a {
+    color: #2980b9;
+    text-decoration: underline;
+    font-weight: 500;
+    margin-right: 4px;
+  }
+  .resource-list a:hover {
+    color: #e67e22;
+  }
+  .error-msg {
+    background: #fff0f0;
+    color: #e74c3c;
+    border-left: 5px solid #e74c3c;
+    font-size: 15px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 12px 0;
+  }
+  .upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 32px;
+    font-size: 17px;
+  }
+  .file-upload-label {
+    display: inline-block;
+    padding: 12px 38px;
+    border-radius: 28px;
+    background: linear-gradient(90deg, #3498db 60%, #6dd5fa 100%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(52,152,219,0.10);
+    margin: 0 auto;
+    transition: background 0.2s;
+    text-align: center;
+  }
+  .file-upload-label:hover {
+    background: linear-gradient(90deg, #217dbb 60%, #4fc3f7 100%);
+    color: #fff;
+  }
+  .upload-section input[type="file"] {
+    display: none;
+  }
+  .upload-section input[type="file"]::-webkit-file-upload-button {
+    font-size: 17px;
+    border-radius: 24px;
+    background: linear-gradient(90deg, #e0e3e7 60%, #f5f6fa 100%);
+    color: #222;
+    border: none;
+    padding: 8px 24px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .upload-section input[type="file"]::-webkit-file-upload-button:hover {
+    background: linear-gradient(90deg, #bfc2c7 60%, #e0e3e7 100%);
+  }
+  .upload-section select, .upload-section input[type="text"] {
+    font-size: 16px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #d0d7de;
+    background: #f8fafc;
+    margin-bottom: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .upload-section button {
+    font-size: 19px;
+    font-weight: 600;
+    padding: 10px 32px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #a18cd1 60%, #fbc2eb 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 8px rgba(52,152,219,0.10);
+    cursor: pointer;
+    margin: 18px auto 0 auto;
+    display: block;
+    transition: background 0.2s, transform 0.1s;
+    text-align: center;
+  }
+  .upload-section button:hover {
+    background: linear-gradient(90deg, #7b5fa7 60%, #a18cd1 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+  }
+  .welcome-msg {
+    background: linear-gradient(90deg, #e3f0fc 60%, #f6fbff 100%);
+    color: #2563a6;
+    border-left: 5px solid #3498db;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 4px rgba(52,152,219,0.04);
+    line-height: 1.5;
+  }
+  .welcome-msg .dot {
+    color: #3498db;
+    font-size: 18px;
+    margin-right: 4px;
+  }
+</style>
+
   </main>
 
   <footer class="footer">
@@ -355,18 +675,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-  <script>
-    // 处理个人中心按钮点击事件
-    document.addEventListener('DOMContentLoaded', function() {
-      const profileLink = document.querySelector('.profile-link');
-      if (profileLink) {
-        profileLink.addEventListener('click', function(e) {
-          e.preventDefault();
-          window.location.href = 'http://127.0.0.1:5000/dashboard';
-        });
-      }
-    });
-  </script>
   
   <div id="contextModal" class="context-modal hidden">
     <div class="modal-content">

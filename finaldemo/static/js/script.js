@@ -29,7 +29,7 @@ const userAnswer = document.getElementById('userAnswer');
 const submitAnswer = document.getElementById('submitAnswer');
 const feedbackTitle = document.getElementById('feedbackTitle');
 const feedbackText = document.getElementById('feedbackText');
-const feedbackCard = document.getElementById('feedbackCard');
+const feedbackCard = answerFeedback; // 直接用answerFeedback
 const nextQuestion = document.getElementById('nextQuestion');
 const searchNode = document.getElementById('searchNode');
 const refreshGraph = document.getElementById('refreshGraph');
@@ -838,6 +838,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (questionGenerating) {
       questionGenerating.classList.remove('hidden');
     }
+    // 清空当前问题内容，防止误导
+    if (currentQuestion) currentQuestion.textContent = '';
     
     // 携带会话ID获取问题
     const sessionParam = currentQuizSession && currentQuizSession.sessionId 
@@ -939,7 +941,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // 显示反馈
         if (feedbackTitle) feedbackTitle.textContent = data.data.correct ? '回答正确!' : '回答错误';
-        if (feedbackCard) feedbackCard.className = data.data.correct ? 'feedback-box success' : 'feedback-box error';
+        if (answerFeedback) answerFeedback.className = data.data.correct ? 'feedback-card success' : 'feedback-card error';
         
         // 清空现有反馈内容并添加新内容
         if (feedbackText) {
@@ -987,27 +989,14 @@ document.addEventListener('DOMContentLoaded', function() {
                   ...updatedStyle
               });
           }
-          
-          setTimeout(() => {
-            if (answerFeedback) answerFeedback.classList.add('hidden');
-            if (noQuestion) noQuestion.classList.remove('hidden');
-            currentQuizSession = null;
-            console.log('问答会话已重置');
-          }, 3000);
+          // 移除自动隐藏逻辑，等待用户操作
         } 
         
         // 如果有下一个问题，自动加载
         else if (data.data.next_question) {
           currentQuestionId = data.data.next_question.id;
           if (currentQuestion) currentQuestion.textContent = data.data.next_question.question;
-          setTimeout(() => {
-            if (answerFeedback) answerFeedback.classList.add('hidden');
-            if (questionCard) questionCard.classList.remove('hidden');
-            if (userAnswer) {
-              userAnswer.value = '';
-              userAnswer.focus();
-            }
-          }, 2000);
+          // 移除自动切换逻辑，等待用户点击“下一个问题”
         }
       }
     })
@@ -1027,6 +1016,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!currentTopologyId || !selectedNodeId) return;
     
     if (answerFeedback) answerFeedback.classList.add('hidden');
+    if (questionCard) questionCard.classList.remove('hidden');
+    if (userAnswer) {
+      userAnswer.value = '';
+      userAnswer.focus();
+    }
     getQuestion(selectedNodeId);
   });
 
