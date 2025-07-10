@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试历史记录修复</title>
+</head>
+<body>
+    <script>
+        // 简单测试 updateNodeColor 函数是否可以在全局作用域中访问
+        console.log("测试开始");
+        
+        // 模拟一个节点对象
+        const testNode = {
+            id: 'test',
+            label: 'Test Node',
+            mastered: true,
+            mastery_score: 10,
+            value: 5
+        };
+        
+        // 加载 script.js 文件后测试
+        setTimeout(() => {
+            if (typeof updateNodeColor === 'function') {
+                console.log("✓ updateNodeColor 函数可以在全局作用域中访问");
+                const style = updateNodeColor(testNode);
+                console.log("✓ updateNodeColor 函数执行成功:", style);
+            } else {
+                console.log("✗ updateNodeColor 函数不可访问");
+            }
+            
+            if (typeof renderHistoryGraph === 'function') {
+                console.log("✓ renderHistoryGraph 函数可以在全局作用域中访问");
+            } else {
+                console.log("✗ renderHistoryGraph 函数不可访问");
+            }
+        }, 1000);
+    </script>
+    <script src="static/js/script.js"></script>
+</body>
+</html>

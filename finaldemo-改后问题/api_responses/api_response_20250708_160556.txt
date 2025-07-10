@@ -1,0 +1,92 @@
+[
+  {
+    "source": "人工智能",
+    "relation": "包含",
+    "target": "机器学习",
+    "highlighted": false
+  },
+  {
+    "source": "人工智能",
+    "relation": "包含",
+    "target": "知识表示与推理",
+    "highlighted": false
+  },
+  {
+    "source": "人工智能",
+    "relation": "包含",
+    "target": "感知与交互",
+    "highlighted": false
+  },
+  {
+    "source": "机器学习",
+    "relation": "包含",
+    "target": "监督学习",
+    "highlighted": false
+  },
+  {
+    "source": "机器学习",
+    "relation": "包含",
+    "target": "无监督学习",
+    "highlighted": false
+  },
+  {
+    "source": "机器学习",
+    "relation": "包含",
+    "target": "强化学习",
+    "highlighted": false
+  },
+  {
+    "source": "监督学习",
+    "relation": "使用算法",
+    "target": "线性回归",
+    "highlighted": false
+  },
+  {
+    "source": "监督学习",
+    "relation": "使用算法",
+    "target": "决策树",
+    "highlighted": false
+  },
+  {
+    "source": "监督学习",
+    "relation": "使用算法",
+    "target": "SVM",
+    "highlighted": false
+  },
+  {
+    "source": "无监督学习",
+    "relation": "使用算法",
+    "target": "K-means聚类",
+    "highlighted": false
+  },
+  {
+    "source": "无监督学习",
+    "relation": "使用算法",
+    "target": "PCA降维",
+    "highlighted": false
+  },
+  {
+    "source": "强化学习",
+    "relation": "包含要素",
+    "target": "Agent",
+    "highlighted": false
+  },
+  {
+    "source": "强化学习",
+    "relation": "包含要素",
+    "target": "Environment",
+    "highlighted": false
+  },
+  {
+    "source": "强化学习",
+    "relation": "包含要素",
+    "target": "Reward",
+    "highlighted": false
+  },
+  {
+    "source": "知识表示与推理",
+    "relation": "包含",
+    "target": "知识图谱",
+    "highlighted": false
+  }
+]
