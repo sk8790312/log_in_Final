@@ -1,4 +1,0 @@
-username,password,email
-Young,123456,123456@qq.com
-Superman,654321,654321@qq.com
-Sk879,321654,321456@qq.com
