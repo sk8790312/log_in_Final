@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}用户仪表板 - 智能助手{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-lg mt-4">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3 class="mb-0 fs-4">欢迎回来, {{ username }}!</h3>
+                </div>
+                <div class="card-body p-4">
+                    <div class="alert alert-success" role="alert">
+                        <i class="bi bi-check-circle-fill"></i> 您已成功登录系统！
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0"><i class="bi bi-compass"></i> 系统导航</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="lead mb-3">您可以通过以下按钮快速访问系统功能</p>
+                            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg w-100 mb-2">
+                                <i class="bi bi-diagram-3-fill"></i> 开始使用知识图谱
+                            </a>
+                            <small class="text-muted">系统将为您创建和管理个性化的知识图谱</small>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="bi bi-person-gear"></i> 账户管理
+                                    </h5>
+                                    <div class="d-grid gap-2 mt-3">
+                                        <a href="{{ url_for('change_password') }}" class="btn btn-outline-primary">
+                                            <i class="bi bi-key-fill"></i> 修改密码
+                                        </a>
+                                        <a href="{{ url_for('verify_email') }}" class="btn btn-outline-info">
+                                            <i class="bi bi-envelope-check-fill"></i> 邮箱验证
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="bi bi-info-circle-fill"></i> 系统信息
+                                    </h5>
+                                    <ul class="list-group list-group-flush mt-3">
+                                        <li class="list-group-item">
+                                            <strong>登录时间：</strong> {{ current_time.strftime('%Y-%m-%d %H:%M:%S') }}
+                                        </li>
+                                        <li class="list-group-item">
+                                            <strong>系统版本：</strong> v1.0
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
