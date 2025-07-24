@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}邮箱验证 - 智能助手{% endblock %}
+
+{% block content %}
+<!-- 添加Font Awesome支持 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<div class="login-page-center">
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-header bg-primary text-white text-center">
+            <h3 class="mb-0">邮箱验证</h3>
+        </div>
+        <div class="card-body">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }}" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            {% if email %}
+                <div class="alert alert-info" role="alert">
+                    <i class="fas fa-envelope"></i>
+                    验证邮件已发送至：<strong>{{ email }}</strong><br>
+                    请查收邮件并输入验证码完成验证。
+                </div>
+            {% endif %}
+            
+            <form method="POST" action="{{ url_for('verify_email') }}">
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="email" name="email" type="email" 
+                           value="{{ email or '' }}" placeholder="邮箱" required />
+                    <label for="email">邮箱地址</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="code" name="code" type="text" 
+                           placeholder="验证码" required maxlength="6" />
+                    <label for="code">6位验证码</label>
+                </div>
+                
+                <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                    <button class="btn btn-primary w-100" type="submit">验证邮箱</button>
+                </div>
+            </form>
+            
+            <hr>
+            
+            <div class="text-center">
+                {% if not email %}
+                <div class="mb-3">
+                    <p class="mb-3"><strong>需要获取验证码？</strong></p>
+                    <form method="POST" action="{{ url_for('send_verification') }}" id="sendCodeForm">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="sendEmail" name="email" type="email" 
+                                   placeholder="邮箱" required />
+                            <label for="sendEmail">请输入邮箱地址</label>
+                        </div>
+                        <button class="btn btn-success btn-lg w-100" type="submit">
+                            <i class="fas fa-paper-plane"></i> 发送验证码
+                        </button>
+                    </form>
+                    <hr>
+                </div>
+                {% endif %}
+                
+                <p class="mb-3"><strong>没有收到验证码？</strong></p>
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>提示：</strong>如果您没有收到验证码，请检查垃圾邮件文件夹，或点击下方按钮重新发送。
+                </div>
+                <form method="POST" action="{{ url_for('send_verification') }}" class="d-inline">
+                    <input type="hidden" name="email" value="{{ email or '' }}">
+                    <input type="hidden" name="username" value="{{ username or '' }}">
+                    <button class="btn btn-warning btn-lg" type="submit" {{ 'disabled' if not email else '' }}>
+                        <i class="fas fa-redo"></i> 重新发送验证码
+                    </button>
+                </form>
+                {% if not email %}
+                <small class="text-muted d-block mt-2">请先在上方输入邮箱地址获取验证码</small>
+                {% endif %}
+            </div>
+        </div>
+        <div class="card-footer text-center py-3">
+            <div class="small">
+                <a href="{{ url_for('login') }}">返回登录页面</a> |
+                <a href="{{ url_for('register') }}">注册新账号</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// 自动聚焦到验证码输入框（如果邮箱已填写）
+document.addEventListener('DOMContentLoaded', function() {
+    const emailInput = document.getElementById('email');
+    const codeInput = document.getElementById('code');
+    
+    if (emailInput.value) {
+        codeInput.focus();
+    } else {
+        emailInput.focus();
+    }
+    
+    // 验证码输入框只允许数字
+    codeInput.addEventListener('input', function() {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
+});
+</script>
+{% endblock %}
